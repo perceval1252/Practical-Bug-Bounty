@@ -22,3 +22,16 @@ This is a non-binding list of some tools that are useful to perform this step. A
 - dirbuster (GUI)
 
 IMPORTANT: Methodology is important, we can use whatever tool fits to us
+
+#### Subdomain Enumeration
+- We can use google as follow: site:example.com ==> Then if we find www for example, we can just add "-www" to our request, i.e. site:example.com -www
+- https://crt.sh/ ==> %.example.com
+- ``subfinder -d example.com -o example`` ==> -o fits for output. It will create an output file
+- ``assetfinder example.com`` ==> Powerfull when used with ``grep`` or ``sort`` 
+- ``amass enum -d example.com`` ==> Takes more time than other tools
+- After we gained a bunch of output files, we can combine them, and then use ``httprobe`` such as: ``cat *file* | httprobe -prefer-https | grep https > examplealive`` ==> This should give us the "living" servers on our list
+- ``gowitness file -f examplealive -P *Foldername* --no-http`` ==> IMPORTANT: Make sure to remove "https" from "https://example.com" ==> This will take screenshots of websites which we can explore easily 
+-  
+
+
+
