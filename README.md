@@ -31,7 +31,13 @@ IMPORTANT: Methodology is important, we can use whatever tool fits to us
 - ``amass enum -d example.com`` ==> Takes more time than other tools
 - After we gained a bunch of output files, we can combine them, and then use ``httprobe`` such as: ``cat *file* | httprobe -prefer-https | grep https > examplealive`` ==> This should give us the "living" servers on our list
 - ``gowitness file -f examplealive -P *Foldername* --no-http`` ==> IMPORTANT: Make sure to remove "https" from "https://example.com" ==> This will take screenshots of websites which we can explore easily 
--  
+
+### Authentication attacks
+#### Broken Access Control
+It happens when you have a user's token, and that you send a "PUT" request, but instead of modifying your own datas, you modify another user's data (with the same token for example.)
+In burp, the extension named *authorized* can be useful to further examine the task.
+
+
 
 
 
