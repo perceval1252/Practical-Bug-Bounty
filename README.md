@@ -37,7 +37,28 @@ IMPORTANT: Methodology is important, we can use whatever tool fits to us
 It happens when you have a user's token, and that you send a "PUT" request, but instead of modifying your own datas, you modify another user's data (with the same token for example.)
 In burp, the extension named *authorized* can be useful to further examine the task.
 
+### Automated tools
+#### Free Tier
+- OWASP ZAP
+- Arachni
+- Wapiti
+- Vega
+- SqlMap
+- Skipfish
 
+#### Commercial
+- BurpSuite
+- Nessus
+- Acunetix
+- Appscan
+- Veracode
+- Netsparker
+- Qualys Web Application Scanning (WAS)
+
+Automating the process:
+1. Might be good to just click on many links on the website, so the tool can analyse it. Be cautions however of the fact that the tool might repeat many times the same request ==> Be careful about all POST requests...
+2. Most of times, automation is out of scope, we really have to check for the conditions of the enterprise.
+3. Findings with automation tools are pretty rare, therefore it's not worth losing too much time and effort using them (might be a 1/10 ratio).
 
 
 
